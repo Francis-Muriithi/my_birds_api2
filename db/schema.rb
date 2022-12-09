@@ -10,23 +10,5 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_09_095501) do
-  create_table "adventures", force: :cascade do |t|
-    t.string "title"
-    t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "birds", force: :cascade do |t|
-    t.string "name"
-    t.string "image"
-    t.string "description"
-    t.integer "adventure_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["adventure_id"], name: "index_birds_on_adventure_id"
-  end
-
-  add_foreign_key "birds", "adventures"
+ActiveRecord::Schema[7.0].define(version: 0) do
 end
